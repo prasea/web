@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{%block content%}
+<table class="table table-borderless">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact No</th>
+            <th>Position</th>
+            <th><button type="submit"><a href="{% url 'emp_form' %}">Add New</a></button></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {%for employee in employees %}
+        <tr>
+            <td>{{employee.name}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.contactNo}}</td>
+            <td>{{employee.position}}</td>
+            <td>
+                <button type="submit"><a href="{% url 'employee_update' employee.id%}">Edit</a></button></button>
+                <button type="submit"><a href="{% url 'emp_delete' employee.id%}">Delete</a></button>
+            </td>
+        </tr>
+        {%endfor%}
+    </tbody>
+      
+    
+        
+</table>
+<button type="submit"><a href="{% url 'emp_form' %}">Go Back</a></button >
+{%endblock%}

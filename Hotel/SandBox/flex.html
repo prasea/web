@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Box</title>
+    <style>
+        *{
+            margin: 0;
+            padding: none;
+        }
+        #container {
+            display: flex;
+            /* We can make flex items go horizontal or vertical i.e. row and column Using Flex-direction: "" property. row is default value*/
+            flex-direction : row;/*row is default/*
+            /*Other values for flex-direction: row-reverse,column*/
+            flex-wrap: wrap;
+            /*flex-flow: row wrap;*/
+        }
+        .item{
+            background: #f4f4f4;
+            border: #ccc solid 1px;
+            padding: 1rem;
+            text-align: center;
+            flex: 1; /* All the flex items will take the equal width to occupy the full width of Browser*/
+            margin: 0.5rem;
+        }
+        #container .item:first-child{
+            flex: 2;
+            flex: 1;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- The outer container is flex Container and all the inner items are flex Items -->
+    <div id="container">
+      <div class="item"><h3>Image 1</h3></div>
+      <div class="item"><h3>Image 2</h3></div>
+      <div class="item"><h3>Image 3</h3></div>
+      <div class="item"><h3>Image 4</h3></div>
+      <div class="item"><h3>Image 5</h3></div>
+      <div class="item"><h3>Image 6</h3></div>
+      <div class="item"><h3>Image 7</h3></div>
+      <div class="item"><h3>Image 8</h3></div>
+      <div class="item"><h3>Image 9</h3></div>
+      <div class="item"><h3>Image 10</h3></div>
+      <div class="item"><h3>Image 11</h3></div>
+      <div class="item"><h3>Image 12</h3></div>
+      <div class="item"><h3>Image 13</h3></div>
+      <div class="item"><h3>Image 14</h3></div>
+      <div class="item"><h3>Image 15</h3></div>
+      <div class="item"><h3>Image 16</h3></div>
+
+    </div>
+</body>
+</html>

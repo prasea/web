@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box1{
+            float: left;
+            height: 100px;
+            width: 200px;
+            margin: 1em;
+            border: 1px solid red;
+        }
+        .after-box{
+            clear: left;
+        }
+        .box2{
+            display: inline-block;/*Is like inline but we can use height and width*/
+            height: 100px;
+            width: 200px;
+            margin: 1em;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box2">I am floating left</div>
+    <div class="box2">I am floating left</div>
+    <div class="box2">I am floating left</div>
+    <div class="box2">I am floating left</div>
+    <div class="box2">I am floating left</div>
+    <div class="box2">I am floating left</div>
+    <div class="box2">I am floating left</div>
+    <div class="after-box">I am not floating. I am normal</div>
+</body>
+</html>

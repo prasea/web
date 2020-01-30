@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .is-required{
+            display: block;
+            font-size: 2rem;
+        }
+        .is-required:after{
+            content: '*';
+            color: #ff0000;
+            padding-left: 0.5rem;
+        }
+        input{
+            width: 60%;
+            padding: 1rem;
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Pseudo selector :before can be used to introduce overlay effect. But whenever you use ;:before and :after pseudo selector it is required to mention the content:'' property*/
+        body{
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.1rem;
+            margin: 0;
+        }
+        header{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            text-align: center;
+        }
+        header:after{
+            content: '';
+            background: url('https://source.unsplash.com/daily') no-repeat center center/cover;
+            opacity: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        /*Animation using Keyframes*/
+        .container{
+            background: #333;
+            height: 100vh;
+            margin: 0;
+        }
+        .box{
+            background: #fff;
+            height: 200px;
+            width: 200px;
+            position: relative;
+            animation: animate1 10s forwards ease-in-out;
+            top: 0;
+            left: 0;
+        }
+        @keyframes animate1{
+            25%{
+                top: 0px;
+                left: 300px;
+                border-radius: 50% 0 0 0 ;
+                background: steelblue;
+            }
+            50%{
+                top: 300px;
+                left: 300px;
+                border-radius: 50% 50% 0 0;
+            }
+            75%{
+                top: 300px;
+                left: 0px;
+                border-radius: 50% 50% 50% 0;
+            }
+            100%{
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+            }
+        }
+        /* Transition Property requires some event like hover to take effect*/
+        .container-transition{
+            background: #f4f4f4;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box-transition{
+            background: #444;
+            height: 100px;
+            width: 100px;
+            /*transition-property: background, border-radius, width;
+            transition-duration: 3s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 2s;*/
+            transition: all 3s ease-in-out;
+        }
+        .box-transition:hover{
+            background: red;
+            border-radius: 50%;
+            width: 300px;
+            height: 300px;
+        }
+        /* Transform Styling*/
+        .container-transform{
+            background: #333;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box-transform{
+            background: #fff;
+            height: 300px;
+            width: 300px;
+            transition: all 4s ease-in-out;
+        }
+        .box-transform:hover{
+            transform: rotate(25deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- <form action="">
+        <label for="name" class="is-required">Name</label>
+        <input type="text" id="name" placeholder="Enter Your Name">
+    </form> -->
+    <header>
+        <h1>Hello World</h1>
+        <p>Lorem, ipsum dolor.</p>
+    </header>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+
+    <!-- For Transtition Animation -->
+    <div class="container-transition">
+        <div class="box-transition"></div>
+    </div>
+
+    <!-- For Transform  -->
+    <div class="container-transform">
+        <div class="box-transform"></div>
+    </div>
+</body>
+</html>

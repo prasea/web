@@ -1,0 +1,92 @@
+.container{
+    max-width: $website-width;
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+}
+%btn-shared{
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    padding: 0.8rem 2rem;
+    transition: all 0.5s;
+}
+.btn{
+    &-main{
+        @extend %btn-shared;
+        background: $main-color;
+        color: #333;
+    }
+    &-light{
+        @extend %btn-shared;
+        background: $light-color;
+        color: #333;
+    }
+    &-dark{
+        @extend %btn-shared;
+        background: $dark-color;
+        color: #f4f4f4;
+    }
+}
+
+// Anything that has .btn- class onto it, we want to grab that
+button[class^='btn-']:hover,
+a[class^='btn-']:hover,
+input[class^='btn-']:hover{
+    background-color: $main-color;
+}
+
+// Background Variations
+.bg{
+    &-main{
+        background-color: $main-color;
+        color: set-text-color($main-color);
+    }
+    &-light{
+        background-color: $light-color;
+        color: set-text-color($light-color);
+    }
+    &-dark{
+        background-color: $dark-color;
+        color: set-text-color($dark-color);
+    }
+    &-medium{
+        background-color: $medium-color;
+        color: set-text-color($medium-color);
+    }
+}
+.lead{
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+.text-center{
+    text-align: center;
+}
+// padding
+.py{
+    &-1{padding: 1rem 0;}
+    &-2{padding: 2rem 0;}
+    &-3{padding: 3rem 0;}
+    &-4{padding: 4rem 0;}
+}
+// Margin
+.my{
+    &-1{margin: 1rem 0;}
+    &-2{margin: 2rem 0;}
+    &-3{margin: 3rem 0;}
+    &-4{margin: 4rem 0;}
+}
+.section-title{
+    font-size: 2rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    // This text-align:  is Useful for 'Technical Skills' in About Section;
+    text-align: center;
+}
+.bottom-line{
+    height: 2px;
+    width: 3rem;
+    background: $main-color;
+    margin: 0 auto 1rem auto;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Viewport Height and Width</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header{
+            background: #333 url('https://source.unsplash.com/weekly') no-repeat center center/cover;
+            color: #fff;
+            /* Viewport height(vh) is Very useful in making the landing page if we want an background image to take the full height without scroll and after scrolling the image moves. It is the horizontal slices which ranges from 0 to 100 */
+            height: 100vh;
+            /* Viewport Width is vertical slices that ranges from 0 to 100. It goes all the way down while height doesnt goes down.
+            width: 50vw;
+            */
+
+            text-align: center;
+            padding: 2rem;
+            padding-top: 15rem;
+
+        }
+
+        header h1{
+            font-size: 3rem;
+        }
+
+        header p{
+            margin: 1rem 0;
+        }
+        .btn{
+            display: inline-block;
+            text-decoration: none;
+            background: #f4f4f4;
+            color: #333;
+            padding: 0.75rem 2rem;
+        }
+
+        section{
+            padding: 2rem;
+            text-align: justify;
+            height: 100vh;
+            background: #444;
+            color: #fff;
+        }
+
+        @media (max-height:500px){
+            header{
+                padding-top: 5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Our Website</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius doloribus impedit facere amet ex accusantium!</p>
+        <a href="#" class="btn">Read More</a>
+    </header>
+    <section>
+        <h3>About Our Company</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sit odit numquam ipsa quisquam nemo? Laudantium ducimus quisquam commodi ipsam voluptate quidem magni corrupti libero ad dolorem quos ex nemo, qui praesentium quam omnis, id possimus excepturi saepe expedita voluptas, dolor aliquam repellendus a? Nihil officiis laborum, ipsam tempora consectetur dolore esse, et ratione natus nam aliquid in. Sint, dignissimos fugiat ratione earum nobis modi, impedit consequuntur porro alias, ab veniam rerum illo sit eligendi sunt exercitationem delectus quam. Autem rerum quaerat delectus eius dolorum quibusdam saepe, reiciendis ducimus, possimus distinctio voluptates! Quidem quisquam porro, sint quos cumque debitis. Cumque.</p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HamBurger</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4;
+        }
+        #main-header  {
+            color: #fff;
+            background: #333;
+            position: relative;
+     
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('https://source.unsplash.com/WLUHO9A_xik/1600x900') no-repeat center center/cover;
+            /*Overlay*/
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(255,0,0,0,5);
+        }
+        .container h1{
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        .container p{
+            font-size: 1.1rem;
+            padding: 1rem;
+            margin: 1rem;
+        }
+        .btn{
+            display: inline-block;
+            text-decoration: none;
+            border: none;
+            background: #f4f4f4;
+            padding: 0.7rem 0.9rem;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <h1>Welcome</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic ipsum quas amet sunt, culpa neque ratione minima iste, tempore, officia assumenda necessitatibus dicta quae alias?</p>
+            <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+    </header>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flex Alignment</title>
+	<style type="text/css">
+		#container1{
+			background: #555;
+			display: flex;
+			height: 98vh;
+			flex-wrap: wrap;
+
+			/*Justify-content will align items Horizontally*/
+			justify-content: flex-start;
+			justify-content: space-evenly;
+
+			/*Align-item will align items Vertically(There should be height*/
+			align-items: stretch;
+			align-items: center;
+
+			/*Align-content aligns vertical when there is extra giant space between. There should be >=2 Rows of flex-items*/
+			align-content: space-evenly;
+		}
+		.item{
+			background: #f4f4f4;
+			border: #ccc solid 1px;
+			padding: 1rem;
+			text-align: center;
+			margin: 0.5rem;
+			/*If we want the custom width. NOt flex:1 using which flex item will take the entire width, then*/
+			width: 300px;
+			/*But there is another property with flex item called flex-basis which is same as width*/
+			flex-basis: 100px;	
+		}
+
+		/*For Container2*/
+		#container2{
+			background: #333;
+			display: flex;
+			height: 600px;
+			flex-wrap: wrap;
+			margin: 0.3rem;
+			justify-content: space-evenly;
+			align-items: flex-start;
+			/*We want the middle to go down and other at same spot*/
+			/*We want to change the order without changing the markUp using ORDER property*/
+		}
+		#container2 .item-1{
+			order: 3
+		}
+		#container2 .item-2{
+			/*Align Single item Vertical*/
+			align-self: center; 
+			/* 	
+				OPTIONS:;
+				flex-start
+				flex-end
+				center
+				baseline 
+				stretch
+			*/
+			order: 2;
+		}
+		#container2 .item-3{
+			order: 1;
+		}
+	</style>
+</head>
+<body>
+	<div id="container1">
+		<div class="item item-1">
+			<h3>Item 1</h3>
+		</div>
+		<div class="item item-2">
+			<h3>Item 2</h3>
+		</div>
+		<div class="item item-3">
+			<h3>Item 3</h3>
+		</div>
+		<div class="item item-4">
+			<h3>Item 4</h3>
+		</div>
+		<div class="item item-5">
+			<h3>Item 5</h3>
+		</div>
+		<div class="item item-6">
+			<h3>Item 6</h3>
+		</div>
+		<div class="item item-7">
+			<h3>Item 7</h3>
+		</div>
+		<div class="item item-8">
+			<h3>Item 8</h3>
+		</div>
+	</div>
+	<!-- Next Container -->
+	<div id="container2">
+		<div class="item item-1">
+			<h3>Item 1</h3>
+		</div>
+		<div class="item item-2">
+			<h3>Item 2</h3>
+		</div>
+		<div class="item item-3">
+			<h3>Item 3</h3>
+		</div>
+	</div>
+</body>
+</html>
